@@ -3,15 +3,17 @@ import { movies } from "../data";
 
 function Movies() {
   const moviesList=movies.map((movie)=>(
-    <div>{movie.title}
-    {movie.time}
-    <ul><li>{movie.genre}</li></ul>
+    
+    <div key={movie.title}>
+     <p> {movie.title}</p>
+   <p> {movie.time}</p>
+    <ul><li>{movie.genres}</li></ul>
     </div>
   ))
-  return <div>{<h1>Movies Page</h1>,moviesList
+  return <div><h1>Movies Page</h1>{moviesList}
     
     
-    /*{code here}*/}</div>;
+   </div>;
 }
 
 export default Movies;
